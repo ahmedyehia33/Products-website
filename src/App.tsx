@@ -1,5 +1,6 @@
 
-import { ChangeEvent, FormEvent, useState } from 'react'
+import { ChangeEvent, FormEvent, useEffect, useState } from 'react'
+import { v4 as uuidv4 } from 'uuid';
 import { Colors, ProductList, formInputList } from './data'
 import MyModal from './UI/Modal'
 import ProductCard from './components/ProductCard'
@@ -11,6 +12,7 @@ import ErrorMessage from './components/ErrorMessage'
 import CircleColor from './UI/CircleColor'
 
 function App() {
+   const [products , setProducts] = useState(ProductList);
     const [product , setProduct] = useState<IProduct>({
       title: '',
       description: '',
@@ -20,7 +22,9 @@ function App() {
       categoryImgURL: '',
       colors:[]
     });
-
+    useEffect(()=>{
+      console.log(products)
+    },[products])
     const [tempColor, setTempColor] = useState<string[]>([]);
     console.log(tempColor)
 
@@ -56,6 +60,22 @@ function App() {
       return;
     }
     setErrors(errors);
+    product.colors = tempColor;
+    setProducts((prv) => [...prv , {...product, id: uuidv4() }]);
+    setProduct({
+      title: '',
+      description: '',
+      imgURL: '',
+      price: '',
+      category: '',
+      categoryImgURL: '',
+      colors: []
+    });
+    setTempColor([]);
+    console.log(products)
+    setIsOpen(false);
+    
+
     console.log('sending product');
   }
 
@@ -74,9 +94,14 @@ function App() {
 
   }
 
-    const renderProducts = ProductList.map((p) => <ProductCard key={p.id} Product={p} />)
+    const renderProducts = products.map((p) => <ProductCard key={p.id} Product={p} />)
     
-    const renderColors = Colors.map((color) => <CircleColor  key={color} color={color} onClick={()=> setTempColor((prv) => [...prv , color])}/>)
+    const renderColors = Colors.map((color) => <CircleColor  key={color} color={color} onClick={()=> {
+      if(tempColor.includes(color)){
+       setTempColor((prv) => prv.filter((item) => item !== color));
+       return
+      }
+      setTempColor((prv) => [...prv , color])}}/>)
 
     const renderFormInputList = formInputList.map((input) => <div key={input.id} className='flex flex-col'>
       <div className='flex flex-col'>
@@ -100,6 +125,12 @@ function App() {
       {renderFormInputList}
       <div className='flex mt-4 space-x-1 flex-wrap '>
       {renderColors}
+      </div>
+      <div className='flex mt-4 space-x-1 flex-wrap  mb-1'>
+        {tempColor.map((color) => (
+          <span key={color} className='h-6 w-16 rounded-lg mt-1 mb-1 text-sm text-white text-center'
+           style={{backgroundColor : color}}>{color}</span>
+        ))}
       </div>
       <div className='flex w-full'>
       <Button className="rounded-lg bg-sky-800 w-[40%] mx-auto h-12 mt-4 text-white " type='submit'>Submit</Button>
