@@ -1,4 +1,4 @@
-import { IProduct } from "./Interfaces";
+import { ICategory, IProduct } from "./Interfaces";
 import { IFormInput } from "./Interfaces";
 
 export const ProductList: IProduct[] = [
@@ -214,4 +214,28 @@ export const Colors : string [] = [
 '#c9a40b', 
 '#a25c11', 
 '#0a7c2a'
+];
+
+export const Categories: ICategory[]= [
+  {
+    id: '1',
+    name: 'Sportswear',
+    imgURL: 'https://images.unsplash.com/photo-1515363435484-5d26011ad7b5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHNwb3J0c3dlYXJ8ZW58MHx8MHx8fDA%3D',
+  },
+  {
+    id: '2',
+    name: 'Casual Wear',
+    imgURL: 'https://plus.unsplash.com/premium_photo-1661284847284-6438c7c16fa9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhc3VhbCUyMHdlYXJ8ZW58MHx8MHx8fDA%3D',
+  },
+  {
+    id: '3',
+    name: 'Formal Wear',
+    imgURL: 'https://plus.unsplash.com/premium_photo-1683140849283-c433d60973db?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3VpdHxlbnwwfHwwfHx8MA%3D%3D',
+  },
+  {
+    id: '4',
+    name: 'Accessories',
+    imgURL: 'https://images.unsplash.com/photo-1610694955371-d4a3e0ce4b52?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bmVja2xhY2V8ZW58MHx8MHx8fDA%3D',
+  }
+
 ]

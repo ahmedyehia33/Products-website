@@ -17,3 +17,10 @@ export interface IProduct {
     type: string
 
   }
+
+  export interface ICategory {
+    id: string ;
+    name: string;
+    imgURL : string
+
+  }

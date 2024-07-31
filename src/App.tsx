@@ -1,5 +1,5 @@
 
-import { ChangeEvent, FormEvent, useEffect, useState } from 'react'
+import { ChangeEvent, FormEvent , useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 import { Colors, ProductList, formInputList } from './data'
 import MyModal from './UI/Modal'
@@ -10,6 +10,7 @@ import { IProduct } from './Interfaces'
 import { productValidation } from './validation'
 import ErrorMessage from './components/ErrorMessage'
 import CircleColor from './UI/CircleColor'
+import Select from './UI/Select';
 
 function App() {
    const [products , setProducts] = useState(ProductList);
@@ -22,11 +23,9 @@ function App() {
       categoryImgURL: '',
       colors:[]
     });
-    useEffect(()=>{
-      console.log(products)
-    },[products])
+    
     const [tempColor, setTempColor] = useState<string[]>([]);
-    console.log(tempColor)
+    
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -72,11 +71,7 @@ function App() {
       colors: []
     });
     setTempColor([]);
-    console.log(products)
     setIsOpen(false);
-    
-
-    console.log('sending product');
   }
 
   const onCancel = ()=>{
@@ -123,9 +118,11 @@ function App() {
     <MyModal isOpen={isOpen} closeModal={closeModal}  title='Add New Product'>
       <form action="" onSubmit={onSubmitHandler}>
       {renderFormInputList}
+      <Select/>
       <div className='flex mt-4 space-x-1 flex-wrap '>
       {renderColors}
       </div>
+      
       <div className='flex mt-4 space-x-1 flex-wrap  mb-1'>
         {tempColor.map((color) => (
           <span key={color} className='h-6 w-16 rounded-lg mt-1 mb-1 text-sm text-white text-center'
