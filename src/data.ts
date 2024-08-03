@@ -213,7 +213,15 @@ export const Colors : string [] = [
 '#150a05', 
 '#c9a40b', 
 '#a25c11', 
-'#0a7c2a'
+'#0a7c2a',
+'#000000',
+'#FFFFFF',
+'#ADD8E6',
+'#FFC0CB',
+'#FF0000',
+'#C0C0C0',
+"#EE82EE",
+'#191970'
 ];
 
 export const Categories: ICategory[]= [

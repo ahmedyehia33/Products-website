@@ -104,7 +104,7 @@ setIsOpenEdit(true)
   }
   const onSubmitEditHandler =(e: FormEvent<HTMLFormElement>): void=>{
     e.preventDefault();
-    product.colors = tempColor;
+    productToEdit.colors = tempColor.concat(productToEdit.colors);
     const {title , price , description , imgURL, colors} = productToEdit;
     const errors = productValidation({title , price , description , imgURL, colors });
     
@@ -116,7 +116,7 @@ setIsOpenEdit(true)
     setErrors(errors);
     
     const updatedProducts = [...products];
-    updatedProducts[productToEditIndex] = {...productToEdit , colors: tempColor.concat(productToEdit.colors)};
+    updatedProducts[productToEditIndex] = {...productToEdit ,colors: tempColor.concat(productToEdit.colors.filter((color) => !tempColor.includes(color))), category: selectedCategory};
     console.log(productToEdit);
     setProducts(updatedProducts);
    
@@ -151,12 +151,14 @@ setIsOpenEdit(true)
   const renderProducts = products.map((p , index) => <ProductCard key={p.id} Product={p} setProductToEdit={setProductToEdit} openEditModal={openEditModal} setProductToEditIndex={setProductToEditIndex} index={index}/>)
     
   const renderColors = Colors.map((color) => <CircleColor  key={color} color={color} onClick={()=> {
-      if(tempColor.includes(color)){
+      if(tempColor.includes(color) ){
        setTempColor((prv) => prv.filter((item) => item !== color));
        return
       }
-      if(productToEdit.colors.includes(color)){
-      setTempColor((prv) => prv.filter((item) => item !==color))
+      if(tempColor.concat(productToEdit.colors).includes(color)){
+      setProductToEdit((prv) => ({...prv , colors: prv.colors.filter((item) => item !== color)}))
+      setTempColor((prv) => prv.filter((item) => item !==color));
+      
       }
       setErrors({...errors , colors: ''});
       setTempColor((prv) => [...prv , color])}}/>)
@@ -221,15 +223,21 @@ setIsOpenEdit(true)
         {productToEditFormInput('description' , 'Product description' , 'description')}
         {productToEditFormInput('imgURL' , 'Product image URL' , 'imgURL')}
         {productToEditFormInput('price' , 'Product price' , 'price')}
+        <div>
+        <Select selected={selectedCategory} setSelected={setSelectedCategory}/>
+        </div>
         <div className='flex flex-col'>
           <div className='flex mt-4 space-x-1 flex-wrap w-full '>
             {renderColors}
           </div>
+          <div>
           <div className='flex space-x-1 mt-2'>
             {tempColor.concat(productToEdit.colors).map((color) =>
               ( <span className='text-sm text-white rounded-lg p-1' style={{backgroundColor : color}}>
                  {color}
                  </span>))}
+          </div>
+          {errors.colors ? <span className="block mt-2"><ErrorMessage msg={errors.colors}/> </span> : null}
           </div>
         </div>
       
