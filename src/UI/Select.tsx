@@ -1,14 +1,20 @@
 'use client'
 
-import { useState } from 'react'
+
 import { Label, Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 import { Categories } from '../data'
+import { ICategory } from '../Interfaces'
+
+interface IProp {
+    selected: ICategory;
+    setSelected: (category: ICategory) => void
+}
 
 
 
-export default function Select() {
-  const [selected, setSelected] = useState(Categories[0])
+export default function Select({selected , setSelected} : IProp) {
+ 
 
   return (
     <Listbox value={selected} onChange={setSelected}>

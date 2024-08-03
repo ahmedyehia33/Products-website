@@ -7,9 +7,9 @@ export const ProductList: IProduct[] = [
       title: "Apple iPhone 13",
       description: "The latest iPhone with A15 Bionic chip, 5G support, and improved camera system.",
      price:'999.99',
-      category: "Smartphones",
+      category:{name: "Smartphones" , id:'1' , imgURL: "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"},
       imgURL: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-family-hero?wid=940&hei=1112&fmt=png-alpha&.v=1632277085000",
-      categoryImgURL: "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg",
+      
       colors: ["#000000", "#FFFFFF", "#ADD8E6", "#FFC0CB", "#FF0000"],
     },
     {
@@ -17,9 +17,9 @@ export const ProductList: IProduct[] = [
       title: "Samsung Galaxy S21",
       description: "Samsung's flagship smartphone with Exynos 2100, dynamic AMOLED display, and triple camera.",
      price: '849.99',
-      category: "Smartphones",
+       category:{name: "Smartphones" , id:'1' , imgURL: "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"},
       imgURL: "https://images.unsplash.com/photo-1610792516775-01de03eae630?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      categoryImgURL: "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg",
+      
       colors: ["#000000", "#C0C0C0", "#EE82EE"],
     },
     {
@@ -27,9 +27,9 @@ export const ProductList: IProduct[] = [
       title: "Sony WH-1000XM4",
       description: "Industry-leading noise-canceling headphones with up to 30 hours of battery life.",
       price:'349.99',
-      category: "Headphones",
+      category: {name:"Headphones" , id:'2' , imgURL:"https://cdn.pixabay.com/photo/2016/11/18/16/32/headphones-1832800__340.jpg"},
       imgURL: "https://images.unsplash.com/photo-1577174881658-0f30ed549adc?q=80&w=1440&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      categoryImgURL: "https://cdn.pixabay.com/photo/2016/11/18/16/32/headphones-1832800__340.jpg",
+      
       colors: ["#000000", "#C0C0C0", "#191970"],
     },
     {
@@ -37,9 +37,9 @@ export const ProductList: IProduct[] = [
       title: "Apple MacBook Pro 14",
       description: "Apple's new 14-inch MacBook Pro with M1 Pro chip, Liquid Retina XDR display, and long battery life.",
       price:'1999.99',
-      category: "Laptops",
+      category: {name:"Laptops" , id:'3' , imgURL:"https://cdn.pixabay.com/photo/2014/05/02/21/50/home-office-336377__340.jpg"},
       imgURL: "https://images.unsplash.com/photo-1635514874042-beb98fd8ea43?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QXBwbGUlMjBNYWNCb29rJTIwUHJvJTIwMTR8ZW58MHx8MHx8fDA%3D",
-      categoryImgURL: "https://cdn.pixabay.com/photo/2014/05/02/21/50/home-office-336377__340.jpg",
+      
       colors: ["#C0C0C0", "#2F4F4F"],
     },
     {
@@ -47,9 +47,9 @@ export const ProductList: IProduct[] = [
       title: "Apple iPhone 13",
       description: "The latest iPhone with A15 Bionic chip, 5G support, and improved camera system.",
      price:'999.99',
-      category: "Smartphones",
+       category:{name: "Smartphones" , id:'1' , imgURL: "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"},
       imgURL: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-family-hero?wid=940&hei=1112&fmt=png-alpha&.v=1632277085000",
-      categoryImgURL: "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg",
+      
       colors: ["#000000", "#FFFFFF", "#ADD8E6", "#FFC0CB", "#FF0000"],
     },
     {
@@ -57,9 +57,9 @@ export const ProductList: IProduct[] = [
       title: "Samsung Galaxy S21",
       description: "Samsung's flagship smartphone with Exynos 2100, dynamic AMOLED display, and triple camera.",
      price: '849.99',
-      category: "Smartphones",
+       category:{name: "Smartphones" , id:'1' , imgURL: "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"},
       imgURL: "https://images.unsplash.com/photo-1610792516775-01de03eae630?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      categoryImgURL: "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg",
+      
       colors: ["#000000", "#C0C0C0", "#EE82EE"],
     },
     {
@@ -67,9 +67,9 @@ export const ProductList: IProduct[] = [
       title: "Sony WH-1000XM4",
       description: "Industry-leading noise-canceling headphones with up to 30 hours of battery life.",
       price:'349.99',
-      category: "Headphones",
+     category: {name:"Headphones" , id:'2' , imgURL:"https://cdn.pixabay.com/photo/2016/11/18/16/32/headphones-1832800__340.jpg"},
       imgURL: "https://images.unsplash.com/photo-1577174881658-0f30ed549adc?q=80&w=1440&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      categoryImgURL: "https://cdn.pixabay.com/photo/2016/11/18/16/32/headphones-1832800__340.jpg",
+      
       colors: ["#000000", "#C0C0C0", "#191970"],
     },
     {
@@ -77,9 +77,9 @@ export const ProductList: IProduct[] = [
       title: "Apple MacBook Pro 14",
       description: "Apple's new 14-inch MacBook Pro with M1 Pro chip, Liquid Retina XDR display, and long battery life.",
       price:'1999.99',
-      category: "Laptops",
+       category: {name:"Laptops" , id:'3' , imgURL:"https://cdn.pixabay.com/photo/2014/05/02/21/50/home-office-336377__340.jpg"},
       imgURL: "https://images.unsplash.com/photo-1635514874042-beb98fd8ea43?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QXBwbGUlMjBNYWNCb29rJTIwUHJvJTIwMTR8ZW58MHx8MHx8fDA%3D",
-      categoryImgURL: "https://cdn.pixabay.com/photo/2014/05/02/21/50/home-office-336377__340.jpg",
+      
       colors: ["#C0C0C0", "#2F4F4F"],
     },
     {
@@ -87,9 +87,9 @@ export const ProductList: IProduct[] = [
       title: "Apple iPhone 13",
       description: "The latest iPhone with A15 Bionic chip, 5G support, and improved camera system.",
      price:'999.99',
-      category: "Smartphones",
+       category:{name: "Smartphones" , id:'1' , imgURL: "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"},
       imgURL: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-family-hero?wid=940&hei=1112&fmt=png-alpha&.v=1632277085000",
-      categoryImgURL: "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg",
+      
       colors: ["#000000", "#FFFFFF", "#ADD8E6", "#FFC0CB", "#FF0000"],
     },
     {
@@ -97,9 +97,9 @@ export const ProductList: IProduct[] = [
       title: "Samsung Galaxy S21",
       description: "Samsung's flagship smartphone with Exynos 2100, dynamic AMOLED display, and triple camera.",
      price: '849.99',
-      category: "Smartphones",
+       category:{name: "Smartphones" , id:'1' , imgURL: "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"},
       imgURL: "https://images.unsplash.com/photo-1610792516775-01de03eae630?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      categoryImgURL: "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg",
+      
       colors: ["#000000", "#C0C0C0", "#EE82EE"],
     },
     {
@@ -107,9 +107,9 @@ export const ProductList: IProduct[] = [
       title: "Sony WH-1000XM4",
       description: "Industry-leading noise-canceling headphones with up to 30 hours of battery life.",
       price:'349.99',
-      category: "Headphones",
+     category: {name:"Headphones" , id:'2' , imgURL:"https://cdn.pixabay.com/photo/2016/11/18/16/32/headphones-1832800__340.jpg"},
       imgURL: "https://images.unsplash.com/photo-1577174881658-0f30ed549adc?q=80&w=1440&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      categoryImgURL: "https://cdn.pixabay.com/photo/2016/11/18/16/32/headphones-1832800__340.jpg",
+      
       colors: ["#000000", "#C0C0C0", "#191970"],
     },
     {
@@ -117,9 +117,9 @@ export const ProductList: IProduct[] = [
       title: "Apple MacBook Pro 14",
       description: "Apple's new 14-inch MacBook Pro with M1 Pro chip, Liquid Retina XDR display, and long battery life.",
       price:'1999.99',
-      category: "Laptops",
+       category: {name:"Laptops" , id:'3' , imgURL:"https://cdn.pixabay.com/photo/2014/05/02/21/50/home-office-336377__340.jpg"},
       imgURL: "https://images.unsplash.com/photo-1635514874042-beb98fd8ea43?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QXBwbGUlMjBNYWNCb29rJTIwUHJvJTIwMTR8ZW58MHx8MHx8fDA%3D",
-      categoryImgURL: "https://cdn.pixabay.com/photo/2014/05/02/21/50/home-office-336377__340.jpg",
+      
       colors: ["#C0C0C0", "#2F4F4F"],
     },
     {
@@ -127,9 +127,9 @@ export const ProductList: IProduct[] = [
       title: "Apple iPhone 13",
       description: "The latest iPhone with A15 Bionic chip, 5G support, and improved camera system.",
      price:'999.99',
-      category: "Smartphones",
+       category:{name: "Smartphones" , id:'1' , imgURL: "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"},
       imgURL: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-family-hero?wid=940&hei=1112&fmt=png-alpha&.v=1632277085000",
-      categoryImgURL: "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg",
+      
       colors: ["#000000", "#FFFFFF", "#ADD8E6", "#FFC0CB", "#FF0000"],
     },
     {
@@ -137,9 +137,9 @@ export const ProductList: IProduct[] = [
       title: "Samsung Galaxy S21",
       description: "Samsung's flagship smartphone with Exynos 2100, dynamic AMOLED display, and triple camera.",
       price: '849.99',
-      category: "Smartphones",
+      category:{name: "Smartphones" , id:'1' , imgURL: "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"},
       imgURL: "https://images.unsplash.com/photo-1610792516775-01de03eae630?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      categoryImgURL: "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg",
+      
       colors: ["#000000", "#C0C0C0", "#EE82EE"],
     },
     {
@@ -147,9 +147,9 @@ export const ProductList: IProduct[] = [
       title: "Sony WH-1000XM4",
       description: "Industry-leading noise-canceling headphones with up to 30 hours of battery life.",
       price:'349.99',
-      category: "Headphones",
+     category: {name:"Headphones" , id:'2' , imgURL:"https://cdn.pixabay.com/photo/2016/11/18/16/32/headphones-1832800__340.jpg"},
       imgURL: "https://images.unsplash.com/photo-1577174881658-0f30ed549adc?q=80&w=1440&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      categoryImgURL: "https://cdn.pixabay.com/photo/2016/11/18/16/32/headphones-1832800__340.jpg",
+      
       colors: ["#000000", "#C0C0C0", "#191970"],
     },
     {
@@ -157,9 +157,9 @@ export const ProductList: IProduct[] = [
       title: "Apple MacBook Pro 14",
       description: "Apple's new 14-inch MacBook Pro with M1 Pro chip, Liquid Retina XDR display, and long battery life.",
       price:'1999.99',
-      category: "Laptops",
+       category: {name:"Laptops" , id:'3' , imgURL:"https://cdn.pixabay.com/photo/2014/05/02/21/50/home-office-336377__340.jpg"},
       imgURL: "https://images.unsplash.com/photo-1635514874042-beb98fd8ea43?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QXBwbGUlMjBNYWNCb29rJTIwUHJvJTIwMTR8ZW58MHx8MHx8fDA%3D",
-      categoryImgURL: "https://cdn.pixabay.com/photo/2014/05/02/21/50/home-office-336377__340.jpg",
+      
       colors: ["#C0C0C0", "#2F4F4F"],
     },
     

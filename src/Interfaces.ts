@@ -1,11 +1,11 @@
+export type EditableProductFields = 'title' | 'price' | 'imgURL' | 'description'
 export interface IProduct {
     id?: string;
     title: string;
     description: string;
     price: string;
-    category: string;
+    category:{id: string , imgURL: string , name: string};
     imgURL: string;
-    categoryImgURL: string;
     colors: string[];
   }
 

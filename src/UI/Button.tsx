@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 
-interface IProp {
+interface IProp extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?:string;
     children: ReactNode
 }

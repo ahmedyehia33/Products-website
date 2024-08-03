@@ -16,14 +16,17 @@
 export const productValidation = (product : { title: string;
     description: string;
     price: string;
-    imgURL: string})=>{
+    imgURL: string;
+        colors: string[]})=>{
     const errors:{ title: string;
         description: string;
         price: string;
-        imgURL: string} = { title: '',
+        imgURL: string
+         colors: string } = { title: '',
                             description: '',
                             imgURL: '',
-                            price: ''};
+                            price: '',
+                            colors: ''};
     const validUrl = /^(https?:\/\/)?((([a-zA-Z\d]([a-zA-Z\d-]*[a-zA-Z\d])*)\.)+[a-zA-Z]{2,}|\d{1,3}(\.\d{1,3}){3}|(\[?[A-Fa-f\d]{0,4}(:[A-Fa-f\d]{0,4}){0,7}\]?))(:\d+)?(\/[-a-zA-Z\d%_.~+]*)*(\?[;&a-zA-Z\d%_.~+=-]*)?(\#[-a-zA-Z\d_]*)?$/.test(product.imgURL)
 
 
@@ -31,7 +34,7 @@ export const productValidation = (product : { title: string;
     if(!product.title.trim() || product.title.length < 10 || product.title.length > 80){
         errors.title = 'Product Title must be between 10 to 80 charcter'
     }
-    if(!product.description.trim() || product.description.length < 10 || product.description.length > 80){
+    if(!product.description.trim() || product.description.length < 10 || product.description.length > 200){
         errors.description = 'Product Description must be between 10 to 80 charcter'
     }
     if(!product.imgURL || !validUrl){
@@ -40,5 +43,9 @@ export const productValidation = (product : { title: string;
     if(!product.price.trim() || isNaN(Number(product.price))){
         errors.price ='Please Enter a Valid Number '
     }
+    if (!product.colors.length ){
+        errors.colors = 'Please Select Product COLORS'
+    }
+
     return errors;
 }
