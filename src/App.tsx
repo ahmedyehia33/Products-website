@@ -114,9 +114,12 @@ setIsOpenEdit(true)
       return;
     }
     setErrors(errors);
+    
     const updatedProducts = [...products];
-    updatedProducts[productToEditIndex] = productToEdit;
+    updatedProducts[productToEditIndex] = {...productToEdit , colors: tempColor.concat(productToEdit.colors)};
+    console.log(productToEdit);
     setProducts(updatedProducts);
+   
     
     setProductToEdit({
       title: '',
@@ -126,6 +129,7 @@ setIsOpenEdit(true)
       category:{name: '' , id:'' , imgURL:''},
       colors: []
     });
+    setTempColor([])
     
     setIsOpenEdit(false);
   }
@@ -150,6 +154,9 @@ setIsOpenEdit(true)
       if(tempColor.includes(color)){
        setTempColor((prv) => prv.filter((item) => item !== color));
        return
+      }
+      if(productToEdit.colors.includes(color)){
+      setTempColor((prv) => prv.filter((item) => item !==color))
       }
       setErrors({...errors , colors: ''});
       setTempColor((prv) => [...prv , color])}}/>)
@@ -214,9 +221,17 @@ setIsOpenEdit(true)
         {productToEditFormInput('description' , 'Product description' , 'description')}
         {productToEditFormInput('imgURL' , 'Product image URL' , 'imgURL')}
         {productToEditFormInput('price' , 'Product price' , 'price')}
-
-      
-      
+        <div className='flex flex-col'>
+          <div className='flex mt-4 space-x-1 flex-wrap w-full '>
+            {renderColors}
+          </div>
+          <div className='flex space-x-1 mt-2'>
+            {tempColor.concat(productToEdit.colors).map((color) =>
+              ( <span className='text-sm text-white rounded-lg p-1' style={{backgroundColor : color}}>
+                 {color}
+                 </span>))}
+          </div>
+        </div>
       
     </div>
       <div className='flex w-full'>
