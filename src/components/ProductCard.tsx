@@ -7,15 +7,20 @@ interface IProp {
     setProductToEdit: (Product : IProduct) => void;
     openEditModal: ()=> void;
     setProductToEditIndex: (value: number)=> void;
+    openRemovingModal: ()=> void;
     index: number ; 
 }
 
 
-const ProductCard= ({Product , setProductToEdit , openEditModal, setProductToEditIndex , index} : IProp) => {
+const ProductCard= ({Product ,openRemovingModal , setProductToEdit , openEditModal, setProductToEditIndex , index} : IProp) => {
   const onEdit = ()=>{
     openEditModal();
     setProductToEdit(Product)
     setProductToEditIndex(index);
+  }
+  const onRemove = ()=> {
+    setProductToEdit(Product);
+    openRemovingModal()
   }
 
 
@@ -44,7 +49,7 @@ const ProductCard= ({Product , setProductToEdit , openEditModal, setProductToEdi
                 </div>
                 <div className="flex w-[100%] items-center space-x-3 justify-center my-4">
                     <Button className="  rounded-lg bg-sky-800  " onClick={onEdit}>Eidt</Button>
-                    <Button className="  rounded-lg bg-red-800 " >Delete</Button>
+                    <Button className="  rounded-lg bg-red-800 " onClick={onRemove}>Delete</Button>
                 </div>
             </div>
           </> );

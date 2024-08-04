@@ -35,6 +35,7 @@ function App() {
     const [tempColor, setTempColor] = useState<string[]>([]);
     const [isOpen, setIsOpen] = useState(false);
     const [isOpenEdit , setIsOpenEdit] = useState(false);
+    const [isOpenRemove , setIsOpenRemove] = useState(false);
     const [errors , setErrors] = useState({ title: '',
       description: '',
       imgURL: '',
@@ -50,6 +51,9 @@ function App() {
   const closeEditModal =()=> { setIsOpenEdit(false)} 
 
   const openEditModal =()=>{setIsOpenEdit(true)}
+  const closeRemovingModal =()=> { setIsOpenRemove(false)} 
+
+  const openRemovingModal =()=>{setIsOpenRemove(true)}
   
 
   const onChangeHandler = (e: ChangeEvent<HTMLInputElement>)=>{
@@ -131,8 +135,16 @@ function App() {
     setIsOpenEdit(false);
 
   }
+  const onSubmitRemoveHandler = (e: FormEvent<HTMLFormElement>): void=>{
+    e.preventDefault();
+    const {id} = productToEdit;
+    const updatedProducts = products.filter((product) => product.id !== id);
+    setProducts(updatedProducts);
+    setIsOpenRemove(false);
+    return
+  }
 
-  const renderProducts = products.map((p , index) => <ProductCard key={p.id} Product={p} setProductToEdit={setProductToEdit} openEditModal={openEditModal} setProductToEditIndex={setProductToEditIndex} index={index}/>)
+  const renderProducts = products.map((p , index) => <ProductCard key={p.id} Product={p} setProductToEdit={setProductToEdit} openEditModal={openEditModal} setProductToEditIndex={setProductToEditIndex} index={index} openRemovingModal={openRemovingModal}/>)
     
   const renderColors = Colors.map((color) => <CircleColor  key={color} color={color} onClick={()=> {
       if(tempColor.includes(color) ){
@@ -232,7 +244,19 @@ function App() {
       </div>
       </form>
       </MyModal>
-       
+      {/*Removing Product Modal */}
+      <MyModal isOpen={isOpenRemove} closeModal={closeRemovingModal}  title='Remove Product'>
+      <form action="" onSubmit={onSubmitRemoveHandler}>
+        
+        <p> Do You want To remove This Product <span className='font-bold text-lg '>{productToEdit.title}</span> ? </p>
+        
+      <div className='flex w-full'>
+      <Button className="rounded-lg bg-red-800 w-[40%] mx-auto h-12 mt-4 text-white " type='submit'>Remove</Button>
+      <Button className="rounded-lg bg-sky-600 w-[40%] mx-auto h-12 mt-4 text-white" type='button' onClick={onCancel}>Cancel</Button>
+      </div>
+      </form>
+      </MyModal>
+
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  mt-5 mx-auto'>
       {renderProducts}
    
