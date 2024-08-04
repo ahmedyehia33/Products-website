@@ -23,9 +23,6 @@ function App() {
       colors:[]
     });
     const [productToEditIndex , setProductToEditIndex] = useState<number>(0)
-    
-    console.log('product to edit' , productToEdit);
-    console.log('product to edit index' , productToEditIndex);
     const [products , setProducts] = useState(ProductList);
     const [product , setProduct] = useState<IProduct>({
       title: '',
@@ -35,47 +32,38 @@ function App() {
       category:{name: '' , id:'' , imgURL:''},
       colors:[]
     });
-    
     const [tempColor, setTempColor] = useState<string[]>([]);
-    
-
     const [isOpen, setIsOpen] = useState(false);
     const [isOpenEdit , setIsOpenEdit] = useState(false);
-
     const [errors , setErrors] = useState({ title: '',
       description: '',
       imgURL: '',
       price: '',
       colors: ''});
       
-
   const closeModal =()=> { setIsOpen(false)} 
                
-
   const openModal =()=>{
     setIsOpen(true)
   }
 
   const closeEditModal =()=> { setIsOpenEdit(false)} 
 
-   
-const openEditModal =()=>{
-setIsOpenEdit(true)
-}
+  const openEditModal =()=>{setIsOpenEdit(true)}
+  
+
   const onChangeHandler = (e: ChangeEvent<HTMLInputElement>)=>{
     const {value , name} = e.target;
     setProduct({...product , [name]: value});
     setErrors({...errors,
         [name]: ''})
-
   }
+
   const onChangeEditHandler = (e: ChangeEvent<HTMLInputElement>)=>{
     const {value , name} = e.target;
     setProductToEdit({...productToEdit , [name]: value});
     setErrors({...errors,
-        [name]: ''})
-
-  }
+        [name]: ''}) }
 
   const onSubmitHandler =(e: FormEvent<HTMLFormElement>): void=>{
     e.preventDefault();
@@ -102,6 +90,7 @@ setIsOpenEdit(true)
     setTempColor([]);
     setIsOpen(false);
   }
+
   const onSubmitEditHandler =(e: FormEvent<HTMLFormElement>): void=>{
     e.preventDefault();
     productToEdit.colors = tempColor.concat(productToEdit.colors);
@@ -114,13 +103,9 @@ setIsOpenEdit(true)
       return;
     }
     setErrors(errors);
-    
     const updatedProducts = [...products];
     updatedProducts[productToEditIndex] = {...productToEdit ,colors: tempColor.concat(productToEdit.colors.filter((color) => !tempColor.includes(color))), category: selectedCategory};
-    console.log(productToEdit);
     setProducts(updatedProducts);
-   
-    
     setProductToEdit({
       title: '',
       description: '',
@@ -130,12 +115,10 @@ setIsOpenEdit(true)
       colors: []
     });
     setTempColor([])
-    
     setIsOpenEdit(false);
   }
 
   const onCancel = ()=>{
-    console.log('cancel');
     setProduct({
       title: '',
       description: '',
@@ -145,6 +128,7 @@ setIsOpenEdit(true)
       colors:[]
     });
     setIsOpen(false);
+    setIsOpenEdit(false);
 
   }
 
