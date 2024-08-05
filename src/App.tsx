@@ -118,7 +118,7 @@ function App() {
       category:{name: '' , id:'' , imgURL:''},
       colors: []
     });
-    setTempColor([])
+    setTempColor([]);
     setIsOpenEdit(false);
   }
 
@@ -186,7 +186,7 @@ function App() {
     <>
     
     <main className='contianer mx-auto flex flex-col items-center'>
-    <Button className='rounded-lg bg-sky-800 w-[5rem] mx-auto my-3 h-12 text-white' onClick={openModal}>Add</Button>
+    <Button className='rounded-lg bg-sky-800 w-[9rem] mx-auto mb-3 mt-8 h-12 text-white' onClick={openModal}>Add new product</Button>
       {/*Add Modal */}
     <MyModal isOpen={isOpen} closeModal={closeModal}  title='Add New Product'>
       <form action="" onSubmit={onSubmitHandler}>

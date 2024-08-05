@@ -42,12 +42,12 @@ const ProductCard= ({Product ,openRemovingModal , setProductToEdit , openEditMod
   ))}
                 </div>
                 <div className="flex items-center justify-between font-semibold text-sky-500">
-                    <span>${Product.price}</span>
-                    <Image className="h-12 w-12 rounded-full object-center"
+                   <div> <span>${Product.price}</span></div>
+                   <div className="h-12 w-12 rounded-full border "> <Image className="w-full h-full rounded-full object-cover"
                      imageUrl={Product.category.imgURL} 
-                    alt="" />
+                    alt="" /></div>
                 </div>
-                <div className="flex w-[100%] items-center space-x-3 justify-center my-4">
+                <div className="flex w-[100%] items-center space-x-3 justify-center mt-4">
                     <Button className="  rounded-lg bg-sky-800  " onClick={onEdit}>Eidt</Button>
                     <Button className="  rounded-lg bg-red-800 " onClick={onRemove}>Delete</Button>
                 </div>

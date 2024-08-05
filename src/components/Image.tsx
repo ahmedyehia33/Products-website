@@ -9,7 +9,7 @@ interface IProp {
 const Image= ({imageUrl , alt , className} : IProp) => {
 
   return ( <>
-        <img src={imageUrl} alt={alt} className={className} style={{ objectPostion: 'center', objectFit:'contain'}} />
+        <img src={imageUrl} alt={alt} className={className} style={{ objectPosition: 'center', objectFit:'cover'}} />
           </> );
 }
 

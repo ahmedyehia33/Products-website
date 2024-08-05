@@ -7,7 +7,11 @@ export const ProductList: IProduct[] = [
       title: "Apple iPhone 13",
       description: "The latest iPhone with A15 Bionic chip, 5G support, and improved camera system.",
      price:'999.99',
-      category:{name: "Smartphones" , id:'1' , imgURL: "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"},
+      category:{
+    id: '1',
+    name: 'Smartphone',
+    imgURL: 'https://plus.unsplash.com/premium_photo-1680985551009-05107cd2752c?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
       imgURL: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-family-hero?wid=940&hei=1112&fmt=png-alpha&.v=1632277085000",
       
       colors: ["#000000", "#FFFFFF", "#ADD8E6", "#FFC0CB", "#FF0000"],
@@ -17,7 +21,11 @@ export const ProductList: IProduct[] = [
       title: "Samsung Galaxy S21",
       description: "Samsung's flagship smartphone with Exynos 2100, dynamic AMOLED display, and triple camera.",
      price: '849.99',
-       category:{name: "Smartphones" , id:'1' , imgURL: "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"},
+       category:{
+    id: '1',
+    name: 'Smartphone',
+    imgURL: 'https://plus.unsplash.com/premium_photo-1680985551009-05107cd2752c?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
       imgURL: "https://images.unsplash.com/photo-1610792516775-01de03eae630?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       
       colors: ["#000000", "#C0C0C0", "#EE82EE"],
@@ -37,7 +45,11 @@ export const ProductList: IProduct[] = [
       title: "Apple MacBook Pro 14",
       description: "Apple's new 14-inch MacBook Pro with M1 Pro chip, Liquid Retina XDR display, and long battery life.",
       price:'1999.99',
-      category: {name:"Laptops" , id:'3' , imgURL:"https://cdn.pixabay.com/photo/2014/05/02/21/50/home-office-336377__340.jpg"},
+      category:  {
+    id: '2',
+    name: 'Laptop',
+    imgURL: 'https://plus.unsplash.com/premium_photo-1681702156223-ea59bfbf1065?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
       imgURL: "https://images.unsplash.com/photo-1635514874042-beb98fd8ea43?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QXBwbGUlMjBNYWNCb29rJTIwUHJvJTIwMTR8ZW58MHx8MHx8fDA%3D",
       
       colors: ["#C0C0C0", "#2F4F4F"],
@@ -47,7 +59,11 @@ export const ProductList: IProduct[] = [
       title: "Apple iPhone 13",
       description: "The latest iPhone with A15 Bionic chip, 5G support, and improved camera system.",
      price:'999.99',
-       category:{name: "Smartphones" , id:'1' , imgURL: "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"},
+       category:{
+    id: '1',
+    name: 'Smartphone',
+    imgURL: 'https://plus.unsplash.com/premium_photo-1680985551009-05107cd2752c?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
       imgURL: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-family-hero?wid=940&hei=1112&fmt=png-alpha&.v=1632277085000",
       
       colors: ["#000000", "#FFFFFF", "#ADD8E6", "#FFC0CB", "#FF0000"],
@@ -57,7 +73,11 @@ export const ProductList: IProduct[] = [
       title: "Samsung Galaxy S21",
       description: "Samsung's flagship smartphone with Exynos 2100, dynamic AMOLED display, and triple camera.",
      price: '849.99',
-       category:{name: "Smartphones" , id:'1' , imgURL: "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"},
+       category:{
+    id: '1',
+    name: 'Smartphone',
+    imgURL: 'https://plus.unsplash.com/premium_photo-1680985551009-05107cd2752c?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
       imgURL: "https://images.unsplash.com/photo-1610792516775-01de03eae630?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       
       colors: ["#000000", "#C0C0C0", "#EE82EE"],
@@ -77,7 +97,11 @@ export const ProductList: IProduct[] = [
       title: "Apple MacBook Pro 14",
       description: "Apple's new 14-inch MacBook Pro with M1 Pro chip, Liquid Retina XDR display, and long battery life.",
       price:'1999.99',
-       category: {name:"Laptops" , id:'3' , imgURL:"https://cdn.pixabay.com/photo/2014/05/02/21/50/home-office-336377__340.jpg"},
+       category:  {
+    id: '2',
+    name: 'Laptop',
+    imgURL: 'https://plus.unsplash.com/premium_photo-1681702156223-ea59bfbf1065?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
       imgURL: "https://images.unsplash.com/photo-1635514874042-beb98fd8ea43?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QXBwbGUlMjBNYWNCb29rJTIwUHJvJTIwMTR8ZW58MHx8MHx8fDA%3D",
       
       colors: ["#C0C0C0", "#2F4F4F"],
@@ -87,7 +111,11 @@ export const ProductList: IProduct[] = [
       title: "Apple iPhone 13",
       description: "The latest iPhone with A15 Bionic chip, 5G support, and improved camera system.",
      price:'999.99',
-       category:{name: "Smartphones" , id:'1' , imgURL: "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"},
+       category:{
+    id: '1',
+    name: 'Smartphone',
+    imgURL: 'https://plus.unsplash.com/premium_photo-1680985551009-05107cd2752c?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
       imgURL: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-family-hero?wid=940&hei=1112&fmt=png-alpha&.v=1632277085000",
       
       colors: ["#000000", "#FFFFFF", "#ADD8E6", "#FFC0CB", "#FF0000"],
@@ -97,7 +125,11 @@ export const ProductList: IProduct[] = [
       title: "Samsung Galaxy S21",
       description: "Samsung's flagship smartphone with Exynos 2100, dynamic AMOLED display, and triple camera.",
      price: '849.99',
-       category:{name: "Smartphones" , id:'1' , imgURL: "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"},
+       category:{
+    id: '1',
+    name: 'Smartphone',
+    imgURL: 'https://plus.unsplash.com/premium_photo-1680985551009-05107cd2752c?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
       imgURL: "https://images.unsplash.com/photo-1610792516775-01de03eae630?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       
       colors: ["#000000", "#C0C0C0", "#EE82EE"],
@@ -117,7 +149,11 @@ export const ProductList: IProduct[] = [
       title: "Apple MacBook Pro 14",
       description: "Apple's new 14-inch MacBook Pro with M1 Pro chip, Liquid Retina XDR display, and long battery life.",
       price:'1999.99',
-       category: {name:"Laptops" , id:'3' , imgURL:"https://cdn.pixabay.com/photo/2014/05/02/21/50/home-office-336377__340.jpg"},
+       category:  {
+    id: '2',
+    name: 'Laptop',
+    imgURL: 'https://plus.unsplash.com/premium_photo-1681702156223-ea59bfbf1065?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
       imgURL: "https://images.unsplash.com/photo-1635514874042-beb98fd8ea43?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QXBwbGUlMjBNYWNCb29rJTIwUHJvJTIwMTR8ZW58MHx8MHx8fDA%3D",
       
       colors: ["#C0C0C0", "#2F4F4F"],
@@ -127,7 +163,11 @@ export const ProductList: IProduct[] = [
       title: "Apple iPhone 13",
       description: "The latest iPhone with A15 Bionic chip, 5G support, and improved camera system.",
      price:'999.99',
-       category:{name: "Smartphones" , id:'1' , imgURL: "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"},
+       category:{
+    id: '1',
+    name: 'Smartphone',
+    imgURL: 'https://plus.unsplash.com/premium_photo-1680985551009-05107cd2752c?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
       imgURL: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-family-hero?wid=940&hei=1112&fmt=png-alpha&.v=1632277085000",
       
       colors: ["#000000", "#FFFFFF", "#ADD8E6", "#FFC0CB", "#FF0000"],
@@ -137,7 +177,11 @@ export const ProductList: IProduct[] = [
       title: "Samsung Galaxy S21",
       description: "Samsung's flagship smartphone with Exynos 2100, dynamic AMOLED display, and triple camera.",
       price: '849.99',
-      category:{name: "Smartphones" , id:'1' , imgURL: "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"},
+      category:{
+    id: '1',
+    name: 'Smartphone',
+    imgURL: 'https://plus.unsplash.com/premium_photo-1680985551009-05107cd2752c?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
       imgURL: "https://images.unsplash.com/photo-1610792516775-01de03eae630?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       
       colors: ["#000000", "#C0C0C0", "#EE82EE"],
@@ -157,7 +201,11 @@ export const ProductList: IProduct[] = [
       title: "Apple MacBook Pro 14",
       description: "Apple's new 14-inch MacBook Pro with M1 Pro chip, Liquid Retina XDR display, and long battery life.",
       price:'1999.99',
-       category: {name:"Laptops" , id:'3' , imgURL:"https://cdn.pixabay.com/photo/2014/05/02/21/50/home-office-336377__340.jpg"},
+       category:  {
+    id: '2',
+    name: 'Laptop',
+    imgURL: 'https://plus.unsplash.com/premium_photo-1681702156223-ea59bfbf1065?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
       imgURL: "https://images.unsplash.com/photo-1635514874042-beb98fd8ea43?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QXBwbGUlMjBNYWNCb29rJTIwUHJvJTIwMTR8ZW58MHx8MHx8fDA%3D",
       
       colors: ["#C0C0C0", "#2F4F4F"],
@@ -227,13 +275,13 @@ export const Colors : string [] = [
 export const Categories: ICategory[]= [
   {
     id: '1',
-    name: 'Sportswear',
-    imgURL: 'https://images.unsplash.com/photo-1515363435484-5d26011ad7b5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHNwb3J0c3dlYXJ8ZW58MHx8MHx8fDA%3D',
+    name: 'Smartphone',
+    imgURL: 'https://plus.unsplash.com/premium_photo-1680985551009-05107cd2752c?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
     id: '2',
-    name: 'Casual Wear',
-    imgURL: 'https://plus.unsplash.com/premium_photo-1661284847284-6438c7c16fa9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhc3VhbCUyMHdlYXJ8ZW58MHx8MHx8fDA%3D',
+    name: 'Laptop',
+    imgURL: 'https://plus.unsplash.com/premium_photo-1681702156223-ea59bfbf1065?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
     id: '3',
